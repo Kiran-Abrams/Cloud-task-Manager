@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A task manager powered by Flask, PostgreSQL, Redis, and Docker.">
+    <title>Cloud Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div>
+                <p class="eyebrow">CLOUD-READY APPLICATION</p>
+                <h1>Task Manager</h1>
+                <p class="subtitle">Organize your work. Track your progress.</p>
+            </div>
+            <span id="connection-status" class="status">Checking service...</span>
+        </header>
+
+        <section class="panel">
+            <h2>Create a task</h2>
+            <form id="task-form">
+                <label for="task-title">Task title</label>
+                <input id="task-title" name="title" maxlength="200"
+                       placeholder="What needs to get done?" required>
+
+                <label for="task-description">Description (optional)</label>
+                <textarea id="task-description" name="description" rows="3"
+                          placeholder="Add a few details..."></textarea>
+
+                <button type="submit">Add task</button>
+                <p id="form-message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="tasks-section">
+            <div class="section-heading">
+                <h2>Your tasks</h2>
+                <button id="refresh-button" class="secondary" type="button">
+                    Refresh
+                </button>
+            </div>
+            <p id="task-count" class="subtitle">Loading tasks...</p>
+            <div id="task-list" class="task-list" aria-live="polite"></div>
+        </section>
+
+        <footer>
+            Flask API · PostgreSQL persistence · Redis cache · Docker Compose
+        </footer>
+    </main>
+</body>
+</html>
