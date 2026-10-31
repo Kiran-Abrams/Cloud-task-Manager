@@ -280,12 +280,12 @@ Cloud_Task_Manager/
 | GitHub repository | Configured |
 | pytest integration | Implemented |
 | GitHub Actions CI | Successfully executed |
-| Azure Container Registry | Pending |
-| Azure Container Apps | Pending |
-| Cloud PostgreSQL connectivity | Pending |
-| Cloud Redis connectivity | Pending |
-| Public application deployment | Pending |
-| Live application verification | Pending |
+| Azure Container Registry | Done |
+| Azure Container Apps | Done |
+| Cloud PostgreSQL connectivity | Done |
+| Cloud Redis connectivity | Done |
+| Public application deployment | Done |
+| Live application verification | Done |
 
 ## 12. Future Work – Azure Deployment
 
